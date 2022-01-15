@@ -9,7 +9,16 @@ module.exports = (webpackConfigEnv, argv) => {
     argv,
   });
 
-  return merge(defaultConfig, {
-    // modify the webpack config however you'd like to by adding to this object
-  });
+  const customConfig = {
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ["postcss-loader"],
+        },
+      ],
+    },
+  };
+
+  return merge(defaultConfig, customConfig);
 };
