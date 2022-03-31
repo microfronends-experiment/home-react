@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import reactLogo from "../assets/logo-react-icon.png";
-
-const baseUrl =
-  "https://employee-dir1-default-rtdb.asia-southeast1.firebasedatabase.app/";
+import { baseUrl } from "../constants/baseUrl";
 
 const Home = () => {
   const [departments, setDepartments] = useState([]);

@@ -2,6 +2,10 @@
   padding: 16px;
   box-shadow: 0 5px 6px -4px rgba(0, 0, 0, 0.5);
   background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Logo {
@@ -10,6 +14,55 @@
   gap: 10px;
   color: #000;
   text-decoration: none;
+}
+
+.Search {
+  border: 1px solid #000;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.SearchBox {
+  width: 500px;
+  height: 40px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 0;
+  outline: none;
+}
+
+.SearchIcon {
+  height: 30px;
+  padding: 0 10px;
+}
+
+.SearchResults {
+  position: absolute;
+  top: 45px;
+  left: -1px;
+  width: 590px;
+  border: 1px solid #000;
+  background-color: #fff;
+  height: 200px;
+  padding: 10px 0;
+  overflow: auto;
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.SearchResultItem {
+  padding: 10px;
+}
+
+.SearchResultItem:hover {
+  background-color: #000;
+  color: #fff;
+}
+.NoResults {
+  padding: 10px;
+  color: #a9a9a9;
+  font-style: italic;
 }
 
 .Home {
