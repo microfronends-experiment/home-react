@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import reactLogo from "../assets/logo-react-icon.png";
 
 const baseUrl =
   "https://employee-dir1-default-rtdb.asia-southeast1.firebasedatabase.app/";
@@ -21,21 +22,38 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      {Object.entries(departments).map((d) => (
-        <Link
-          key={d[0]}
-          style={{
-            border: "1px solid",
-            padding: "20px",
-            margin: "10px",
-            cursor: "pointer",
-          }}
-          to={"/department/" + d[0]}
-        >
-          {d[1]}
-        </Link>
-      ))}
+    <div className="Home">
+      <div style={{ fontSize: "24px", marginBottom: "16px" }}>Departments</div>
+      <div className="Home__cards">
+        {Object.entries(departments).map((d) => (
+          <Link key={d[0]} to={"/department/" + d[0]} className="Home__card">
+            {d[1]} &gt;
+          </Link>
+        ))}
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          left: "32px",
+          bottom: "32px",
+          zIndex: 5,
+          backgroundColor: "#61dafb",
+          borderRadius: "60px",
+          display: "flex",
+          alignItems: "center",
+          padding: "5px",
+        }}
+      >
+        <img
+          src={reactLogo}
+          alt="React Logo"
+          height={40}
+          style={{ marginRight: "10px" }}
+        ></img>
+        <div style={{ color: "#000", fontSize: "18px", paddingRight: "10px" }}>
+          Built with React JS
+        </div>
+      </div>
     </div>
   );
 };
