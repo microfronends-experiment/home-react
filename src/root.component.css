@@ -1,0 +1,37 @@
+.Header {
+  padding: 16px;
+  box-shadow: 0 5px 6px -4px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.Home {
+  padding: 32px 64px;
+}
+
+.Home__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.Home__card {
+  border: 1px solid #000;
+  padding: 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+  transition: 0.5s;
+}
+
+.Home__card:hover {
+  background-color: #000;
+  color: #fff;
+}
