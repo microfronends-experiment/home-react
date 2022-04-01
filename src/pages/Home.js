@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <div style={{ fontSize: "24px", marginBottom: "16px" }}>Departments</div>
+      <div className="Home_title">Departments</div>
       <div className="Home__cards">
         {Object.entries(departments).map((d) => (
           <Link key={d[0]} to={"/department/" + d[0]} className="Home__card">
@@ -31,7 +31,7 @@ const Home = () => {
       </div>
       <div
         style={{
-          position: "absolute",
+          position: "fixed",
           left: "32px",
           bottom: "32px",
           zIndex: 5,

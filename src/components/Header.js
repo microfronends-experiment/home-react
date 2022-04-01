@@ -48,8 +48,8 @@ const Header = () => {
   return (
     <div className="Header">
       <Link to="/" className="Logo">
-        <img src={brandLogo} alt="Brand Logo" height={40}></img>
-        <h1 style={{ fontSize: "32px", margin: 0 }}>Employee Directory</h1>
+        <img src={brandLogo} alt="Brand Logo" className="Logo_img"></img>
+        <h1 className="Logo_text">Employee Directory</h1>
       </Link>
       <div className="Search">
         <input
